@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 194 74% 85%;
+    --foreground: 220 60% 15%;
+
+    --card: 194 70% 92%;
+    --card-foreground: 220 60% 15%;
+
+    --popover: 194 70% 92%;
+    --popover-foreground: 220 60% 15%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 194 60% 70%;
+    --secondary-foreground: 220 60% 15%;
+
+    --muted: 194 40% 80%;
+    --muted-foreground: 220 30% 40%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 194 40% 75%;
+    --input: 194 40% 85%;
+    --ring: 199 89% 48%;
+
+    --radius: 1rem;
+
+    --weather-gradient-start: 194 74% 85%;
+    --weather-gradient-end: 199 89% 70%;
+    
+    --card-glass: 194 70% 92%;
+    --card-glass-border: 0 0% 100%;
+    
+    --chart-fill: 199 89% 48%;
+  }
+
+  .dark {
+    --background: 220 60% 12%;
+    --foreground: 194 70% 95%;
+
+    --card: 220 50% 18%;
+    --card-foreground: 194 70% 95%;
+
+    --popover: 220 50% 18%;
+    --popover-foreground: 194 70% 95%;
+
+    --primary: 199 89% 60%;
+    --primary-foreground: 220 60% 12%;
+
+    --secondary: 220 40% 25%;
+    --secondary-foreground: 194 70% 95%;
+
+    --muted: 220 40% 22%;
+    --muted-foreground: 194 30% 65%;
+
+    --accent: 199 89% 60%;
+    --accent-foreground: 220 60% 12%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 194 70% 95%;
+
+    --border: 220 40% 25%;
+    --input: 220 40% 22%;
+    --ring: 199 89% 60%;
+
+    --weather-gradient-start: 220 60% 12%;
+    --weather-gradient-end: 220 50% 18%;
+    
+    --card-glass: 220 50% 18%;
+    --card-glass-border: 220 40% 30%;
+    
+    --chart-fill: 199 89% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body,
+  #root {
+    @apply h-full w-full;
+    min-height: 100dvh;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
